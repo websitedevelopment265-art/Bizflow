@@ -89,6 +89,8 @@ export default function Navbar() {
                     </div>
                 </div>
               </div>
+              <Link to="/faq" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#1B2B45] transition-colors">FAQ</Link>
+              <Link to="/news" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#1B2B45] transition-colors">NEWS</Link>
               <Link to="/contact" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#1B2B45] transition-colors">CONTACT</Link>
               
               <button 
@@ -153,6 +155,8 @@ export default function Navbar() {
                     </Link>
                 ))}
             </div>
+            <Link to="/faq" onClick={() => setIsMenuOpen(false)} className="block text-slate-600 font-medium text-base">FAQ</Link>
+            <Link to="/news" onClick={() => setIsMenuOpen(false)} className="block text-slate-600 font-medium text-base">NEWS</Link>
             <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="block text-slate-600 font-medium text-base">CONTACT</Link>
             <Link to="#" onClick={() => setIsMenuOpen(false)} className="block w-full text-center bg-[#1B2B45] text-white px-6 py-3 rounded font-bold hover:bg-blue-900 transition-colors">
                 Get a Consultation

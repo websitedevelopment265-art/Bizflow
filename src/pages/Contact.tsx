@@ -28,7 +28,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             className="text-6xl md:text-8xl font-black mb-8 tracking-tighter uppercase"
           >
-            GET IN TOUCH WITH US
+            Ready to Scale Your Business in Malaysia? Let's Talk.
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -36,7 +36,7 @@ export default function Contact() {
             transition={{ delay: 0.1 }}
             className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-medium leading-relaxed"
           >
-            Have a question about our services or want to collaborate? Our team is here to help you navigate the Malaysian business landscape.
+            We have assisted over 2,000+ individuals and companies in navigating the complex Malaysian regulatory landscape with our 100% Compliance Approach.
           </motion.p>
         </div>
       </section>
@@ -124,24 +124,33 @@ export default function Contact() {
                   <label className="text-sm font-black uppercase tracking-widest text-slate-400 ml-2">Professional Email</label>
                   <input 
                     type="email" 
-                    placeholder="Your Email Address" 
+                    placeholder="Your Business Email" 
                     required 
                     className="w-full px-8 py-5 bg-white/5 border border-white/10 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all" 
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-black uppercase tracking-widest text-slate-400 ml-2">Subject</label>
+                  <label className="text-sm font-black uppercase tracking-widest text-slate-400 ml-2">Phone Number</label>
+                  <input 
+                    type="tel" 
+                    placeholder="Your Contact Number" 
+                    required 
+                    className="w-full px-8 py-5 bg-white/5 border border-white/10 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all" 
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-black uppercase tracking-widest text-slate-400 ml-2">Service Interest</label>
                   <select 
                     required 
                     className="w-full px-8 py-5 bg-white/5 border border-white/10 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all appearance-none cursor-pointer"
                   >
-                    <option value="" disabled selected className="bg-[#0a1930]">Select a Query Type</option>
-                    <option value="Startup Consulting" className="bg-[#0a1930]">Startup Consulting</option>
-                    <option value="Tech Inquiry" className="bg-[#0a1930]">Tech Inquiry</option>
-                    <option value="Financial Analysis" className="bg-[#0a1930]">Financial Analysis</option>
-                    <option value="Interview Request" className="bg-[#0a1930]">Interview Request</option>
-                    <option value="Other" className="bg-[#0a1930]">Other</option>
+                    <option value="" disabled selected className="bg-[#0a1930]">Select a Service</option>
+                    <option value="Startups" className="bg-[#0a1930]">Startups</option>
+                    <option value="Tech" className="bg-[#0a1930]">Tech</option>
+                    <option value="Finance" className="bg-[#0a1930]">Finance</option>
+                    <option value="Interviews" className="bg-[#0a1930]">Interviews</option>
                   </select>
                 </div>
 

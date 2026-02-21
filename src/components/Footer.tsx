@@ -74,10 +74,10 @@ export default function Footer() {
             <ul className="space-y-4 text-sm font-medium">
               <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
               <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="#" className="hover:text-white transition-colors">Services</Link></li>
-              <li><Link to="#" className="hover:text-white transition-colors">FAQ</Link></li>
-              <li><Link to="#" className="hover:text-white transition-colors">News</Link></li>
-              <li><Link to="#" className="hover:text-white transition-colors">Contact Us</Link></li>
+              <li><Link to="/services" className="hover:text-white transition-colors">Services</Link></li>
+              <li><Link to="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
+              <li><Link to="/news" className="hover:text-white transition-colors">News</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -85,11 +85,11 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-8 text-xl tracking-tight">Services</h4>
             <ul className="space-y-4 text-sm font-medium">
-              <li><Link to="#" className="hover:text-white transition-colors">Company Secretarial</Link></li>
-              <li><Link to="#" className="hover:text-white transition-colors">Business Licensing</Link></li>
-              <li><Link to="#" className="hover:text-white transition-colors">Corporate Advisory</Link></li>
-              <li><Link to="#" className="hover:text-white transition-colors">Expatriate & Immigration Support</Link></li>
-              <li><Link to="#" className="hover:text-white transition-colors">Buy & Sell Business</Link></li>
+              <li><Link to="/services/Startups" className="hover:text-white transition-colors">Startup Consulting</Link></li>
+              <li><Link to="/services/Tech" className="hover:text-white transition-colors">Tech Revolution</Link></li>
+              <li><Link to="/services/Finance" className="hover:text-white transition-colors">Strategic Finance</Link></li>
+              <li><Link to="/services/Interviews" className="hover:text-white transition-colors">Leadership Interviews</Link></li>
+              <li><Link to="/services/News & Blogs" className="hover:text-white transition-colors">News & Blogs</Link></li>
             </ul>
           </div>
 
@@ -101,19 +101,19 @@ export default function Footer() {
                 <div className="mt-1 bg-white/10 p-2 rounded-full">
                     <MapPin className="h-4 w-4 text-white flex-shrink-0" />
                 </div>
-                <span className="leading-relaxed">Level 09, Integra Tower, The Intermark 50400 Kuala Lumpur</span>
+                <span className="leading-relaxed">Level 33, Ilham Tower, No. 8, Jalan Binjai, 50450 Kuala Lumpur, Malaysia</span>
               </li>
               <li className="flex items-center gap-4">
                 <div className="bg-white/10 p-2 rounded-full">
                     <Phone className="h-4 w-4 text-white flex-shrink-0" />
                 </div>
-                <span>+60 11-2424 4993</span>
+                <span>+60 3-2117 5000</span>
               </li>
               <li className="flex items-center gap-4">
                 <div className="bg-white/10 p-2 rounded-full">
                     <Mail className="h-4 w-4 text-white flex-shrink-0" />
                 </div>
-                <span>bizskoop@gmail.com</span>
+                <span>info@bizskoop.com</span>
               </li>
             </ul>
           </div>
