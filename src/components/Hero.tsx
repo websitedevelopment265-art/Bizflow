@@ -15,6 +15,12 @@ const sliderImages = [
   "https://i.pinimg.com/1200x/63/e1/25/63e125af0f5b96f7cd39592ae78da5e4.jpg"
 ];
 
+const phrases = [
+  "Company Registration",
+  "Compliance Excellence",
+  "Startup Growth"
+];
+
 export default function Hero({ article }: HeroProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [formData, setFormData] = useState({
@@ -37,6 +43,35 @@ export default function Hero({ article }: HeroProps) {
     alert('Consultation request sent!');
     setFormData({ name: '', email: '', phone: '', service: '' });
   };
+
+  const [text, setText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+
+  useEffect(() => {
+    const handleTyping = () => {
+      const i = loopNum % phrases.length;
+      const fullText = phrases[i];
+
+      setText(isDeleting 
+        ? fullText.substring(0, text.length - 1) 
+        : fullText.substring(0, text.length + 1)
+      );
+
+      setTypingSpeed(isDeleting ? 30 : 150);
+
+      if (!isDeleting && text === fullText) {
+        setTimeout(() => setIsDeleting(true), 2000);
+      } else if (isDeleting && text === '') {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      }
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, loopNum, typingSpeed]);
 
   const displayTitle = article?.title || "Empowering Your Business Journey in Malaysia";
   const displayExcerpt = article?.excerpt || "Expert guidance on company registration, compliance, and strategic growth for startups and established enterprises.";
@@ -89,8 +124,10 @@ export default function Hero({ article }: HeroProps) {
                 </h1>
               </Link>
             ) : (
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-md">
-                {displayTitle}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-md min-h-[160px]">
+                Empowering Your Business Journey in Malaysia <br />
+                <span className="text-[#ff007f]">{text}</span>
+                <span className="animate-pulse text-[#ff007f]">|</span>
               </h1>
             )}
             <p className="text-lg md:text-xl text-slate-200 mb-8 line-clamp-3 leading-relaxed drop-shadow-sm">

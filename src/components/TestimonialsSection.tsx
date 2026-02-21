@@ -154,7 +154,7 @@ export default function TestimonialsSection() {
                     {[reviews[currentIndex], reviews[(currentIndex + 1) % reviews.length]].map((review, idx) => (
                       <motion.div
                         key={review.id}
-                        whileHover={{ y: -5, borderColor: "rgba(233, 30, 99, 0.3)" }}
+                        whileHover={{ scale: 1.05, borderColor: "rgba(255, 0, 127, 0.3)" }}
                         className="bg-slate-50 rounded-2xl p-8 border border-slate-100 relative shadow-sm transition-all"
                       >
                         <div className="absolute top-8 right-8">

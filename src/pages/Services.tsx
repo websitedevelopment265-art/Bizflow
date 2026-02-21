@@ -64,14 +64,14 @@ export default function Services() {
                   whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)" }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="group bg-[#001f3f] p-12 rounded-3xl text-white hover:bg-[#002a54] transition-all duration-500 shadow-2xl flex flex-col h-full relative overflow-hidden"
+                  className="group bg-[#001f3f] p-12 rounded-3xl text-white hover:bg-[#001a35] transition-all duration-500 shadow-2xl flex flex-col h-full relative overflow-hidden"
                 >
                   {/* Decorative Background Icon/Pattern */}
                   <div className="absolute -right-8 -bottom-8 opacity-5 group-hover:opacity-10 transition-opacity">
                     <div className="text-9xl font-black">{key.charAt(0)}</div>
                   </div>
 
-                  <h3 className="text-4xl font-black mb-6 tracking-tighter group-hover:text-pink-500 transition-colors">
+                  <h3 className="text-4xl font-black mb-6 tracking-tighter group-hover:text-[#ff007f] transition-colors">
                     {key.toUpperCase()}
                   </h3>
                   <p className="text-xl text-slate-300 mb-10 font-medium leading-relaxed">
@@ -80,7 +80,7 @@ export default function Services() {
                   <div className="mt-auto">
                     <Link 
                       to={`/services/${key}`}
-                      className="inline-flex items-center bg-white text-[#0a1930] px-10 py-4 rounded-xl font-black text-lg hover:bg-pink-500 hover:text-white transition-all transform group-hover:translate-x-2"
+                      className="inline-flex items-center bg-white text-[#0a1930] px-10 py-4 rounded-xl font-black text-lg group-hover:bg-[#ff007f] group-hover:text-white transition-all transform group-hover:translate-x-2"
                     >
                       Learn More
                     </Link>

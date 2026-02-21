@@ -72,14 +72,14 @@ export default function Navbar() {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
-              <Link to="/" className="text-[#001f3f] font-bold text-sm tracking-wide hover:text-blue-700 transition-colors">HOME</Link>
-              <Link to="/about" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#001f3f] transition-colors">ABOUT</Link>
+              <Link to="/" className="text-[#001f3f] font-bold text-sm tracking-wide hover:text-blue-700 transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-[#ff007f] after:transition-all after:duration-300 hover:after:w-full">HOME</Link>
+              <Link to="/about" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#001f3f] transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-[#ff007f] after:transition-all after:duration-300 hover:after:w-full">ABOUT</Link>
               <div className="relative group">
-                <button className="flex items-center text-slate-500 font-medium text-sm tracking-wide hover:text-[#001f3f] transition-colors focus:outline-none">
+                <button className="flex items-center text-slate-500 font-medium text-sm tracking-wide hover:text-[#001f3f] transition-colors focus:outline-none relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-[#ff007f] after:transition-all after:duration-300 hover:after:w-full">
                   SERVICES <ChevronDown className="h-4 w-4 ml-1" />
                 </button>
                 {/* Dropdown Placeholder */}
-                <div className="absolute left-0 mt-2 w-48 bg-white border border-slate-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="absolute left-0 mt-2 w-48 bg-white border border-slate-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top group-hover:translate-y-0 translate-y-2 z-50">
                     <div className="py-1">
                         {categories.map(cat => (
                             <Link key={cat} to={cat === "All" ? "/services" : `/services/${cat}`} className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#001f3f]">
@@ -89,9 +89,9 @@ export default function Navbar() {
                     </div>
                 </div>
               </div>
-              <Link to="/faq" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#001f3f] transition-colors">FAQ</Link>
-              <Link to="/news" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#001f3f] transition-colors">NEWS</Link>
-              <Link to="/contact" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#001f3f] transition-colors">CONTACT</Link>
+              <Link to="/faq" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#001f3f] transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-[#ff007f] after:transition-all after:duration-300 hover:after:w-full">FAQ</Link>
+              <Link to="/news" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#001f3f] transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-[#ff007f] after:transition-all after:duration-300 hover:after:w-full">NEWS</Link>
+              <Link to="/contact" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#001f3f] transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-[#ff007f] after:transition-all after:duration-300 hover:after:w-full">CONTACT</Link>
               
               <button 
                 onClick={() => setIsSearchOpen(!isSearchOpen)}

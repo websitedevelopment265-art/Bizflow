@@ -62,7 +62,6 @@ export default function Home() {
           <Hero article={featuredArticle} />
           <StatsSection />
           <AboutSection />
-          <CTASection />
           <WhyChooseSection />
           <WorkProcessSection />
           <MissionSection />

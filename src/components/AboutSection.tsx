@@ -1,5 +1,6 @@
 import { Check } from 'lucide-react';
 import { motion } from 'motion/react';
+import AnimatedCounter from './AnimatedCounter';
 
 export default function AboutSection() {
   return (
@@ -25,7 +26,7 @@ export default function AboutSection() {
             </div>
             <div className="w-2/3 bg-[#001f3f] p-8 flex items-center justify-center">
               <h3 className="text-2xl md:text-3xl font-bold text-white text-center leading-tight">
-                500+ Companies <br/> Served
+                <AnimatedCounter to={500} suffix="+" /> Companies <br/> Served
               </h3>
             </div>
           </motion.div>
@@ -48,7 +49,7 @@ export default function AboutSection() {
             </div>
             <div className="w-2/3 bg-[#ff007f] p-8 flex items-center justify-center">
               <h3 className="text-2xl md:text-3xl font-bold text-white text-center leading-tight">
-                2000+ Individuals <br/> Assisted
+                <AnimatedCounter to={2000} suffix="+" /> Individuals <br/> Assisted
               </h3>
             </div>
           </motion.div>
@@ -89,7 +90,9 @@ export default function AboutSection() {
 
             {/* Experience Box */}
             <div className="absolute bottom-0 left-0 bg-[#001f3f] text-white p-8 w-48 text-center shadow-lg rounded-tr-lg">
-              <span className="block text-4xl font-bold mb-1">12+</span>
+              <span className="block text-4xl font-bold mb-1">
+                <AnimatedCounter to={12} suffix="+" />
+              </span>
               <span className="text-sm font-medium uppercase tracking-wider">Experiences</span>
             </div>
           </motion.div>
@@ -131,7 +134,9 @@ export default function AboutSection() {
 
               {/* Successful Case Box */}
               <div className="bg-[#001f3f] text-white p-6 text-center rounded shadow-lg min-w-[180px]">
-                <span className="block text-3xl font-bold mb-1">1500+</span>
+                <span className="block text-3xl font-bold mb-1">
+                  <AnimatedCounter to={1500} suffix="+" />
+                </span>
                 <span className="text-xs font-medium uppercase tracking-wider">Successful Case</span>
               </div>
             </div>
