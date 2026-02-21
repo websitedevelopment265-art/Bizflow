@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <div className="flex-grow bg-white">
       {/* Header Section */}
-      <section className="bg-[#1B2B45] py-24 text-white relative overflow-hidden">
+      <section className="bg-[#001f3f] py-24 text-white relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://i.pinimg.com/1200x/63/e1/25/63e125af0f5b96f7cd39592ae78da5e4.jpg" 
@@ -19,7 +19,7 @@ export default function Contact() {
             className="w-full h-full object-cover opacity-20" 
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1B2B45]/80 via-[#1B2B45]/60 to-[#1B2B45]/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#001f3f]/80 via-[#001f3f]/60 to-[#001f3f]/80" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -54,14 +54,14 @@ export default function Contact() {
               className="space-y-12"
             >
               <div>
-                <h2 className="text-4xl font-black text-[#1B2B45] mb-8 tracking-tight uppercase">Contact Details</h2>
+                <h2 className="text-4xl font-black text-[#001f3f] mb-8 tracking-tight uppercase">Contact Details</h2>
                 <div className="space-y-8">
                   <div className="flex items-start gap-6 group">
                     <div className="bg-pink-500/10 p-4 rounded-2xl group-hover:bg-pink-500 group-hover:text-white transition-all duration-300">
                       <MapPin className="h-8 w-8 text-pink-500 group-hover:text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-black text-[#1B2B45] uppercase tracking-wider mb-1">Office Address</h3>
+                      <h3 className="text-lg font-black text-[#001f3f] uppercase tracking-wider mb-1">Office Address</h3>
                       <p className="text-slate-500 font-medium text-lg">Level 33, Ilham Tower, No. 8, Jalan Binjai, 50450 Kuala Lumpur, Malaysia</p>
                     </div>
                   </div>
@@ -71,7 +71,7 @@ export default function Contact() {
                       <Mail className="h-8 w-8 text-pink-500 group-hover:text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-black text-[#1B2B45] uppercase tracking-wider mb-1">Email Address</h3>
+                      <h3 className="text-lg font-black text-[#001f3f] uppercase tracking-wider mb-1">Email Address</h3>
                       <p className="text-slate-500 font-medium text-lg">info@bizskoop.com</p>
                     </div>
                   </div>
@@ -81,7 +81,7 @@ export default function Contact() {
                       <Phone className="h-8 w-8 text-pink-500 group-hover:text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-black text-[#1B2B45] uppercase tracking-wider mb-1">Phone Number</h3>
+                      <h3 className="text-lg font-black text-[#001f3f] uppercase tracking-wider mb-1">Phone Number</h3>
                       <p className="text-slate-500 font-medium text-lg">+60 3-2117 5000</p>
                     </div>
                   </div>
@@ -94,7 +94,7 @@ export default function Contact() {
                   <ShieldCheck className="h-10 w-10 text-emerald-500" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-black text-[#1B2B45] uppercase tracking-[0.2em] mb-1">Trust & Security</h4>
+                  <h4 className="text-sm font-black text-[#001f3f] uppercase tracking-[0.2em] mb-1">Trust & Security</h4>
                   <p className="text-slate-500 text-sm font-medium">We value your privacy. Your data is handled with 100% Compliance Approach.</p>
                 </div>
               </div>
@@ -105,9 +105,9 @@ export default function Contact() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-[#0a1930] rounded-[3rem] p-10 md:p-16 text-white shadow-2xl relative overflow-hidden"
+              className="bg-[#001f3f] rounded-[3rem] p-10 md:p-16 text-white shadow-2xl relative overflow-hidden"
             >
-              <div className="absolute top-0 right-0 w-64 h-64 bg-pink-500/5 rounded-full blur-3xl -mr-32 -mt-32" />
+              <div className="absolute top-0 right-0 w-64 h-64 bg-[#ff007f]/5 rounded-full blur-3xl -mr-32 -mt-32" />
               
               <form className="space-y-8" onSubmit={handleSubmit}>
                 <div className="space-y-2">
@@ -166,7 +166,7 @@ export default function Contact() {
 
                 <button 
                   type="submit" 
-                  className="w-full py-6 bg-pink-500 text-white font-black text-2xl rounded-2xl hover:bg-pink-600 transition-all shadow-[0_10px_30px_rgba(233,30,99,0.3)] transform hover:-translate-y-1"
+                  className="w-full py-6 bg-[#ff007f] text-white font-black text-2xl rounded-2xl hover:bg-[#ff007f]/90 transition-all shadow-[0_10px_30px_rgba(255,0,127,0.3)] transform hover:-translate-y-1"
                 >
                   SEND MESSAGE
                 </button>

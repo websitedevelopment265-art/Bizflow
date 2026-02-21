@@ -41,7 +41,7 @@ export default function Services() {
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-6xl md:text-8xl font-black text-[#1B2B45] mb-8 tracking-tighter"
+                className="text-6xl md:text-8xl font-black text-[#001f3f] mb-8 tracking-tighter"
               >
                 OUR SERVICES
               </motion.h1>
@@ -61,9 +61,10 @@ export default function Services() {
                   key={key}
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
+                  whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)" }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="group bg-[#0a1930] p-12 rounded-3xl text-white hover:bg-[#152a4a] transition-all duration-500 shadow-2xl flex flex-col h-full relative overflow-hidden"
+                  className="group bg-[#001f3f] p-12 rounded-3xl text-white hover:bg-[#002a54] transition-all duration-500 shadow-2xl flex flex-col h-full relative overflow-hidden"
                 >
                   {/* Decorative Background Icon/Pattern */}
                   <div className="absolute -right-8 -bottom-8 opacity-5 group-hover:opacity-10 transition-opacity">
@@ -144,7 +145,7 @@ export default function Services() {
           <section className="py-24 bg-slate-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="mb-16">
-                <h2 className="text-4xl font-black text-[#1B2B45] tracking-tight">LATEST {activeCategory.toUpperCase()} INSIGHTS</h2>
+                <h2 className="text-4xl font-black text-[#001f3f] tracking-tight">LATEST {activeCategory.toUpperCase()} INSIGHTS</h2>
               </div>
               
               {loading ? (
@@ -162,11 +163,11 @@ export default function Services() {
                       <img src={article.image} alt={article.title} className="w-full h-56 object-cover" />
                       <div className="p-8">
                         <span className="text-xs font-black text-pink-500 uppercase tracking-[0.2em]">{article.category}</span>
-                        <h3 className="text-2xl font-black text-[#1B2B45] mt-3 mb-4 line-clamp-2 leading-tight">{article.title}</h3>
+                        <h3 className="text-2xl font-black text-[#001f3f] mt-3 mb-4 line-clamp-2 leading-tight">{article.title}</h3>
                         <p className="text-slate-500 text-base mb-6 line-clamp-3 font-medium">{article.excerpt}</p>
                         <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-50">
                           <span className="text-sm text-slate-400 font-bold">{article.date}</span>
-                          <Link to={`/article/${article.id}`} className="text-sm font-black text-[#1B2B45] hover:text-pink-500 transition-colors">READ MORE →</Link>
+                          <Link to={`/article/${article.id}`} className="text-sm font-black text-[#001f3f] hover:text-[#ff007f] transition-colors">READ MORE →</Link>
                         </div>
                       </div>
                     </motion.div>
@@ -179,8 +180,8 @@ export default function Services() {
           {/* Category Specific Contact Form */}
           <section className="py-24 bg-white">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="bg-[#0a1930] rounded-[3rem] p-12 md:p-20 text-white shadow-2xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-pink-500/5 rounded-full blur-3xl -mr-32 -mt-32" />
+              <div className="bg-[#001f3f] rounded-[3rem] p-12 md:p-20 text-white shadow-2xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-[#ff007f]/5 rounded-full blur-3xl -mr-32 -mt-32" />
                 <h2 className="text-4xl md:text-5xl font-black mb-12 text-center tracking-tighter">
                   {catContent?.formTitle || "GET IN TOUCH"}
                 </h2>
@@ -199,7 +200,7 @@ export default function Services() {
                     <label className="text-sm font-black uppercase tracking-widest text-slate-400 ml-2">Message</label>
                     <textarea placeholder="How can we help you?" rows={5} required className="w-full px-8 py-5 bg-white/5 border border-white/10 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all"></textarea>
                   </div>
-                  <button type="submit" className="w-full py-6 bg-pink-500 text-white font-black text-2xl rounded-2xl hover:bg-pink-600 transition-all shadow-[0_10px_30px_rgba(233,30,99,0.3)] transform hover:-translate-y-1">
+                  <button type="submit" className="w-full py-6 bg-[#ff007f] text-white font-black text-2xl rounded-2xl hover:bg-[#ff007f]/90 transition-all shadow-[0_10px_30px_rgba(255,0,127,0.3)] transform hover:-translate-y-1">
                     SUBMIT REQUEST
                   </button>
                 </form>

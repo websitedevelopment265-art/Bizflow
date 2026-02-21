@@ -3,7 +3,8 @@
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --color-brand-blue: #1e3a8a;
+  --color-brand-blue: #001f3f;
+  --color-brand-pink: #ff007f;
   --color-brand-slate: #475569;
 }
 

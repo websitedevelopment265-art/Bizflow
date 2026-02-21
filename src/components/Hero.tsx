@@ -128,7 +128,7 @@ export default function Hero({ article }: HeroProps) {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    className="w-full px-4 py-3 bg-[#1B2B45] border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 bg-[#001f3f] border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#ff007f] focus:border-transparent transition-all"
                   />
                 </div>
 
@@ -141,7 +141,7 @@ export default function Hero({ article }: HeroProps) {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    className="w-full px-4 py-3 bg-[#1B2B45] border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 bg-[#001f3f] border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#ff007f] focus:border-transparent transition-all"
                   />
                 </div>
 
@@ -159,7 +159,7 @@ export default function Hero({ article }: HeroProps) {
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                      className="w-full pl-12 pr-4 py-3 bg-[#1B2B45] border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all"
+                      className="w-full pl-12 pr-4 py-3 bg-[#001f3f] border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#ff007f] focus:border-transparent transition-all"
                     />
                   </div>
                 </div>
@@ -172,7 +172,7 @@ export default function Hero({ article }: HeroProps) {
                       required
                       value={formData.service}
                       onChange={(e) => setFormData({...formData, service: e.target.value})}
-                      className="w-full px-4 py-3 bg-[#1B2B45] border border-slate-600 rounded-lg text-white appearance-none focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all cursor-pointer"
+                      className="w-full px-4 py-3 bg-[#001f3f] border border-slate-600 rounded-lg text-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#ff007f] focus:border-transparent transition-all cursor-pointer"
                     >
                       <option value="" disabled className="text-slate-400">Select a service</option>
                       <option value="esd">ESD / MDEC / IRDA / JKTSM</option>
@@ -186,7 +186,7 @@ export default function Hero({ article }: HeroProps) {
 
                 <button
                   type="submit"
-                  className="w-full mt-2 bg-[#E91E63] hover:bg-[#D81B60] text-white font-bold py-3.5 px-4 rounded-lg shadow-lg transform transition hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E91E63] focus:ring-offset-slate-900"
+                  className="w-full mt-2 bg-[#ff007f] hover:bg-[#ff007f]/90 text-white font-bold py-3.5 px-4 rounded-lg shadow-lg transform transition hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ff007f] focus:ring-offset-slate-900"
                 >
                   Get Free Consultation
                 </button>

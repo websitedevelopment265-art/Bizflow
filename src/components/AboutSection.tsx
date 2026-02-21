@@ -23,7 +23,7 @@ export default function AboutSection() {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="w-2/3 bg-[#1B2B45] p-8 flex items-center justify-center">
+            <div className="w-2/3 bg-[#001f3f] p-8 flex items-center justify-center">
               <h3 className="text-2xl md:text-3xl font-bold text-white text-center leading-tight">
                 500+ Companies <br/> Served
               </h3>
@@ -46,7 +46,7 @@ export default function AboutSection() {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="w-2/3 bg-[#E91E63] p-8 flex items-center justify-center">
+            <div className="w-2/3 bg-[#ff007f] p-8 flex items-center justify-center">
               <h3 className="text-2xl md:text-3xl font-bold text-white text-center leading-tight">
                 2000+ Individuals <br/> Assisted
               </h3>
@@ -88,7 +88,7 @@ export default function AboutSection() {
             </div>
 
             {/* Experience Box */}
-            <div className="absolute bottom-0 left-0 bg-[#1B2B45] text-white p-8 w-48 text-center shadow-lg rounded-tr-lg">
+            <div className="absolute bottom-0 left-0 bg-[#001f3f] text-white p-8 w-48 text-center shadow-lg rounded-tr-lg">
               <span className="block text-4xl font-bold mb-1">12+</span>
               <span className="text-sm font-medium uppercase tracking-wider">Experiences</span>
             </div>
@@ -102,8 +102,8 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
             className="lg:pl-8"
           >
-            <span className="text-[#1B2B45] font-bold text-sm uppercase tracking-widest mb-2 block">About Bizskoop</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1B2B45] mb-6 leading-tight">
+            <span className="text-[#001f3f] font-bold text-sm uppercase tracking-widest mb-2 block">About Bizskoop</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#001f3f] mb-6 leading-tight">
               We Execute Our Ideas From Start To Finish
             </h2>
             <p className="text-slate-600 mb-6 leading-relaxed">
@@ -116,27 +116,27 @@ export default function AboutSection() {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-10">
               <ul className="space-y-4">
                 <li className="flex items-center text-slate-700 font-medium">
-                  <Check className="h-5 w-5 text-[#E91E63] mr-3" />
+                  <Check className="h-5 w-5 text-[#ff007f] mr-3" />
                   End-to-End Execution
                 </li>
                 <li className="flex items-center text-slate-700 font-medium">
-                  <Check className="h-5 w-5 text-[#E91E63] mr-3" />
+                  <Check className="h-5 w-5 text-[#ff007f] mr-3" />
                   Clear Client Guidance
                 </li>
                 <li className="flex items-center text-slate-700 font-medium">
-                  <Check className="h-5 w-5 text-[#E91E63] mr-3" />
+                  <Check className="h-5 w-5 text-[#ff007f] mr-3" />
                   Strategic & Compliant Planning
                 </li>
               </ul>
 
               {/* Successful Case Box */}
-              <div className="bg-[#1B2B45] text-white p-6 text-center rounded shadow-lg min-w-[180px]">
+              <div className="bg-[#001f3f] text-white p-6 text-center rounded shadow-lg min-w-[180px]">
                 <span className="block text-3xl font-bold mb-1">1500+</span>
                 <span className="text-xs font-medium uppercase tracking-wider">Successful Case</span>
               </div>
             </div>
 
-            <button className="bg-[#E91E63] hover:bg-[#D81B60] text-white font-bold py-4 px-8 rounded shadow-md transition-colors">
+            <button className="bg-[#ff007f] hover:bg-[#ff007f]/90 text-white font-bold py-4 px-8 rounded shadow-md transition-colors">
               Discover More
             </button>
           </motion.div>

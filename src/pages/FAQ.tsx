@@ -32,7 +32,7 @@ export default function FAQ() {
   return (
     <div className="flex-grow bg-white">
       {/* Header Section */}
-      <section className="bg-[#1B2B45] py-24 text-white relative overflow-hidden">
+      <section className="bg-[#001f3f] py-24 text-white relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://i.pinimg.com/1200x/a4/ba/1d/a4ba1d9c6cc62d6791063ecb6f2f4210.jpg" 
@@ -40,7 +40,7 @@ export default function FAQ() {
             className="w-full h-full object-cover opacity-20" 
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1B2B45]/80 via-[#1B2B45]/60 to-[#1B2B45]/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#001f3f]/80 via-[#001f3f]/60 to-[#001f3f]/80" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -79,7 +79,7 @@ export default function FAQ() {
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   className="w-full px-8 py-8 flex items-center justify-between text-left focus:outline-none group"
                 >
-                  <span className="text-xl md:text-2xl font-black text-[#1B2B45] uppercase tracking-tight group-hover:text-pink-500 transition-colors">
+                  <span className="text-xl md:text-2xl font-black text-[#001f3f] uppercase tracking-tight group-hover:text-[#ff007f] transition-colors">
                     {faq.question}
                   </span>
                   {openIndex === index ? (

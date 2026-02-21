@@ -32,7 +32,7 @@ export default function Navbar() {
   return (
     <div className="w-full font-sans">
       {/* Top Bar */}
-      <div className="bg-[#1B2B45] text-white py-2 px-4 text-xs sm:text-sm">
+      <div className="bg-[#001f3f] text-white py-2 px-4 text-xs sm:text-sm">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
           <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-6">
             <div className="flex items-center space-x-2">
@@ -61,46 +61,46 @@ export default function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <nav className="bg-white py-4 shadow-sm relative">
+      <nav className="bg-white py-4 shadow-sm relative sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2 group">
-              <div className="bg-[#1B2B45] text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl pb-1">b</div>
-              <span className="text-2xl font-bold text-[#1B2B45] tracking-tight">bizskoop</span>
+              <div className="bg-[#001f3f] text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl pb-1">b</div>
+              <span className="text-2xl font-bold text-[#001f3f] tracking-tight">bizskoop</span>
             </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
-              <Link to="/" className="text-[#1B2B45] font-bold text-sm tracking-wide hover:text-blue-700 transition-colors">HOME</Link>
-              <Link to="/about" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#1B2B45] transition-colors">ABOUT</Link>
+              <Link to="/" className="text-[#001f3f] font-bold text-sm tracking-wide hover:text-blue-700 transition-colors">HOME</Link>
+              <Link to="/about" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#001f3f] transition-colors">ABOUT</Link>
               <div className="relative group">
-                <button className="flex items-center text-slate-500 font-medium text-sm tracking-wide hover:text-[#1B2B45] transition-colors focus:outline-none">
+                <button className="flex items-center text-slate-500 font-medium text-sm tracking-wide hover:text-[#001f3f] transition-colors focus:outline-none">
                   SERVICES <ChevronDown className="h-4 w-4 ml-1" />
                 </button>
                 {/* Dropdown Placeholder */}
                 <div className="absolute left-0 mt-2 w-48 bg-white border border-slate-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="py-1">
                         {categories.map(cat => (
-                            <Link key={cat} to={cat === "All" ? "/services" : `/services/${cat}`} className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#1B2B45]">
+                            <Link key={cat} to={cat === "All" ? "/services" : `/services/${cat}`} className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#001f3f]">
                                 {cat}
                             </Link>
                         ))}
                     </div>
                 </div>
               </div>
-              <Link to="/faq" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#1B2B45] transition-colors">FAQ</Link>
-              <Link to="/news" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#1B2B45] transition-colors">NEWS</Link>
-              <Link to="/contact" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#1B2B45] transition-colors">CONTACT</Link>
+              <Link to="/faq" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#001f3f] transition-colors">FAQ</Link>
+              <Link to="/news" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#001f3f] transition-colors">NEWS</Link>
+              <Link to="/contact" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#001f3f] transition-colors">CONTACT</Link>
               
               <button 
                 onClick={() => setIsSearchOpen(!isSearchOpen)}
-                className="text-slate-500 hover:text-[#1B2B45] transition-colors focus:outline-none"
+                className="text-slate-500 hover:text-[#001f3f] transition-colors focus:outline-none"
               >
                 <Search className="h-5 w-5" />
               </button>
 
-              <Link to="#" className="bg-[#1B2B45] text-white px-6 py-3 rounded text-sm font-bold hover:bg-blue-900 transition-colors shadow-md">
+              <Link to="#" className="bg-[#001f3f] text-white px-6 py-3 rounded text-sm font-bold hover:bg-blue-900 transition-colors shadow-md">
                 Get a Consultation
               </Link>
             </div>

@@ -42,30 +42,30 @@ function StatBlock({ value, suffix, label, delay = 0 }: StatBlockProps) {
         y: -10, 
         scale: 1.02,
         backgroundColor: "rgba(255, 255, 255, 0.05)",
-        borderColor: "rgba(233, 30, 99, 0.5)"
+        borderColor: "rgba(255, 0, 127, 0.5)"
       }}
       className="flex flex-col items-center justify-center p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 group cursor-default"
     >
       <div className="text-5xl md:text-6xl font-black text-white mb-2 tracking-tighter flex items-baseline">
         <span>{displayValue.toLocaleString()}</span>
-        <span className="text-pink-500 ml-1">{suffix}</span>
+        <span className="text-[#ff007f] ml-1">{suffix}</span>
       </div>
       <div className="text-xs md:text-sm font-bold text-slate-400 uppercase tracking-[0.2em] text-center group-hover:text-white transition-colors">
         {label}
       </div>
       
       {/* Decorative Glow on Hover */}
-      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none shadow-[0_0_30px_rgba(233,30,99,0.15)]" />
+      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none shadow-[0_0_30px_rgba(255, 0, 127, 0.15)]" />
     </motion.div>
   );
 }
 
 export default function StatsSection() {
   return (
-    <section className="bg-[#0a1930] py-24 relative overflow-hidden">
+    <section className="bg-[#001f3f] py-24 relative overflow-hidden">
       {/* Background Accents */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute -top-24 -left-24 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl" />
+        <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#ff007f]/10 rounded-full blur-3xl" />
         <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
       </div>
 
