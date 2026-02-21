@@ -32,13 +32,17 @@ export default function Hero({ article }: HeroProps) {
     return () => clearInterval(timer);
   }, []);
 
-  if (!article) return null;
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert('Consultation request sent!');
     setFormData({ name: '', email: '', phone: '', service: '' });
   };
+
+  const displayTitle = article?.title || "Empowering Your Business Journey in Malaysia";
+  const displayExcerpt = article?.excerpt || "Expert guidance on company registration, compliance, and strategic growth for startups and established enterprises.";
+  const displayAuthor = article?.author || "Bizskoop Editorial";
+  const displayDate = article?.date || "February 2026";
+  const articleId = article?.id;
 
   return (
     <section className="relative w-full min-h-[600px] lg:h-[700px] overflow-hidden bg-slate-900 flex items-center">
@@ -76,23 +80,29 @@ export default function Hero({ article }: HeroProps) {
             className="max-w-2xl"
           >
             <span className="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-wider text-white uppercase bg-brand-blue rounded shadow-lg">
-              Latest Breaking News
+              {article ? "Latest Breaking News" : "Welcome to Bizskoop"}
             </span>
-            <Link to={`/article/${article.id}`} className="block group">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight group-hover:text-blue-200 transition-colors drop-shadow-md">
-                {article.title}
+            {articleId ? (
+              <Link to={`/article/${articleId}`} className="block group">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight group-hover:text-blue-200 transition-colors drop-shadow-md">
+                  {displayTitle}
+                </h1>
+              </Link>
+            ) : (
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-md">
+                {displayTitle}
               </h1>
-            </Link>
+            )}
             <p className="text-lg md:text-xl text-slate-200 mb-8 line-clamp-3 leading-relaxed drop-shadow-sm">
-              {article.excerpt}
+              {displayExcerpt}
             </p>
             <div className="flex items-center text-sm font-medium text-slate-300 space-x-6">
               <div className="flex items-center">
                 <span className="w-8 h-[1px] bg-slate-400 mr-3"></span>
-                <span>By {article.author}</span>
+                <span>By {displayAuthor}</span>
               </div>
               <span className="w-1 h-1 bg-slate-400 rounded-full"></span>
-              <span>{article.date}</span>
+              <span>{displayDate}</span>
             </div>
           </motion.div>
 
