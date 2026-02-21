@@ -3,7 +3,7 @@ import { Search, Menu, X, Phone, Mail, Clock, Facebook, Linkedin, Instagram, Che
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { Category } from '../types';
 
-const categories: Category[] = ["All", "Startups", "Tech", "Finance", "Interviews"];
+const categories: Category[] = ["All", "Startups", "Tech", "Finance", "Interviews", "News & Blogs"];
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -73,7 +73,7 @@ export default function Navbar() {
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               <Link to="/" className="text-[#1B2B45] font-bold text-sm tracking-wide hover:text-blue-700 transition-colors">HOME</Link>
-              <Link to="#" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#1B2B45] transition-colors">ABOUT</Link>
+              <Link to="/about" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#1B2B45] transition-colors">ABOUT</Link>
               <div className="relative group">
                 <button className="flex items-center text-slate-500 font-medium text-sm tracking-wide hover:text-[#1B2B45] transition-colors focus:outline-none">
                   SERVICES <ChevronDown className="h-4 w-4 ml-1" />
@@ -82,14 +82,14 @@ export default function Navbar() {
                 <div className="absolute left-0 mt-2 w-48 bg-white border border-slate-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="py-1">
                         {categories.map(cat => (
-                            <Link key={cat} to={cat === "All" ? "/" : `/?category=${cat}`} className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#1B2B45]">
+                            <Link key={cat} to={cat === "All" ? "/services" : `/services/${cat}`} className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#1B2B45]">
                                 {cat}
                             </Link>
                         ))}
                     </div>
                 </div>
               </div>
-              <Link to="#" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#1B2B45] transition-colors">CONTACT</Link>
+              <Link to="/contact" className="text-slate-500 font-medium text-sm tracking-wide hover:text-[#1B2B45] transition-colors">CONTACT</Link>
               
               <button 
                 onClick={() => setIsSearchOpen(!isSearchOpen)}
@@ -144,16 +144,16 @@ export default function Navbar() {
         {isMenuOpen && (
           <div className="lg:hidden bg-white border-t border-slate-100 py-4 px-4 space-y-4">
             <Link to="/" onClick={() => setIsMenuOpen(false)} className="block text-[#1B2B45] font-bold text-base">HOME</Link>
-            <Link to="#" onClick={() => setIsMenuOpen(false)} className="block text-slate-600 font-medium text-base">ABOUT</Link>
+            <Link to="/about" onClick={() => setIsMenuOpen(false)} className="block text-slate-600 font-medium text-base">ABOUT</Link>
             <div className="space-y-2 pl-4 border-l-2 border-slate-100">
                 <span className="block text-slate-400 text-xs font-bold uppercase tracking-wider mb-2">Services</span>
                 {categories.map(cat => (
-                    <Link key={cat} to={cat === "All" ? "/" : `/?category=${cat}`} onClick={() => setIsMenuOpen(false)} className="block text-slate-600 hover:text-[#1B2B45] text-sm">
+                    <Link key={cat} to={cat === "All" ? "/services" : `/services/${cat}`} onClick={() => setIsMenuOpen(false)} className="block text-slate-600 hover:text-[#1B2B45] text-sm">
                         {cat}
                     </Link>
                 ))}
             </div>
-            <Link to="#" onClick={() => setIsMenuOpen(false)} className="block text-slate-600 font-medium text-base">CONTACT</Link>
+            <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="block text-slate-600 font-medium text-base">CONTACT</Link>
             <Link to="#" onClick={() => setIsMenuOpen(false)} className="block w-full text-center bg-[#1B2B45] text-white px-6 py-3 rounded font-bold hover:bg-blue-900 transition-colors">
                 Get a Consultation
             </Link>

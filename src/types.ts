@@ -9,4 +9,4 @@ export interface Article {
   image: string;
 }
 
-export type Category = "All" | "Startups" | "Tech" | "Finance" | "Interviews";
+export type Category = "All" | "Startups" | "Tech" | "Finance" | "Interviews" | "News & Blogs";

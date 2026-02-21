@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Article } from '../types';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 
@@ -8,13 +8,29 @@ interface HeroProps {
   article: Article | null;
 }
 
+const sliderImages = [
+  "https://i.pinimg.com/1200x/2e/1a/93/2e1a93a0250c4a768b82e708b53e7364.jpg",
+  "https://i.pinimg.com/1200x/a4/ba/1d/a4ba1d9c6cc62d6791063ecb6f2f4210.jpg",
+  "https://i.pinimg.com/736x/6d/82/89/6d828901b9b3788b1cefd2cf3daff1de.jpg",
+  "https://i.pinimg.com/1200x/63/e1/25/63e125af0f5b96f7cd39592ae78da5e4.jpg"
+];
+
 export default function Hero({ article }: HeroProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     service: ''
   });
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % sliderImages.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(timer);
+  }, []);
 
   if (!article) return null;
 
@@ -26,16 +42,30 @@ export default function Hero({ article }: HeroProps) {
 
   return (
     <section className="relative w-full min-h-[600px] lg:h-[700px] overflow-hidden bg-slate-900 flex items-center">
-      {/* Background Image */}
-      <img
-        src={article.image}
-        alt={article.title}
-        className="absolute inset-0 w-full h-full object-cover opacity-50"
-        referrerPolicy="no-referrer"
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/60 to-slate-900/30" />
+      {/* Background Image Slider */}
+      <div className="absolute inset-0 z-0">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentImageIndex}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 0.6, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            className="absolute inset-0 w-full h-full"
+          >
+            <motion.img
+              src={sliderImages[currentImageIndex]}
+              alt={`Slide ${currentImageIndex + 1}`}
+              className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-110"
+              referrerPolicy="no-referrer"
+            />
+          </motion.div>
+        </AnimatePresence>
+      </div>
       
-      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-0">
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/60 to-slate-900/30 z-10" />
+      
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-0 z-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Content: Article Info */}

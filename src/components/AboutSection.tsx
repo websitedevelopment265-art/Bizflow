@@ -80,7 +80,7 @@ export default function AboutSection() {
             {/* Overlapping Smaller Image */}
             <div className="absolute top-1/2 -right-4 w-3/5 h-[300px] border-8 border-white rounded-lg shadow-xl overflow-hidden hidden md:block">
               <img 
-                src="https://picsum.photos/seed/discussion/500/400" 
+                src="https://i.pinimg.com/1200x/0af944f8f5edc7eeb99033a6e08ea008.jpg" 
                 alt="Client Discussion" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
